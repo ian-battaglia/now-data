@@ -6,6 +6,9 @@ Sources
   Watching  MyAnimeList ("Watching" list, top by score)    needs MAL_CLIENT_ID (+ username in now-config.json)
   Listening Last.fm    (top artists over a recent period)  needs LASTFM_API_KEY (+ username in now-config.json)
 
+Each item carries a link (Hardcover book page, MAL anime page, Last.fm artist page), and now.json also holds a
+"links" block with your profile on each site (used to link the Reading / Watching / Listening labels).
+
 Keys are read from environment variables, never from a file. A source with no key or username is skipped.
 If a source fails, its previous values in now.json are kept and the problem is recorded under "errors".
 Standard library only.
@@ -35,20 +38,38 @@ def hardcover(cfg, token):
     token = token.strip()
     if not token.lower().startswith('bearer '):
         token = 'Bearer ' + token
-    query = ('query { me { user_books(where: {status_id: {_eq: 2}}, order_by: {updated_at: desc}, limit: %d) '
-             '{ book { title contributions { author { name } } } } } }' % limit)
-    out = http(os.environ.get('HARDCOVER_URL', 'https://api.hardcover.app/v1/graphql'),
-               {'authorization': token, 'content-type': 'application/json'}, json.dumps({'query': query}).encode('utf-8'))
-    if out.get('errors'):
-        raise RuntimeError('Hardcover: ' + str(out['errors'][0].get('message', 'error')))
-    me = out['data']['me']
-    me = me[0] if isinstance(me, list) else me          # the API returns a list with one user
+    url = os.environ.get('HARDCOVER_URL', 'https://api.hardcover.app/v1/graphql')
+    headers = {'authorization': token, 'content-type': 'application/json'}
+
+    def ask(query):
+        out = http(url, headers, json.dumps({'query': query}).encode('utf-8'))
+        if out.get('errors'):
+            raise RuntimeError('Hardcover: ' + str(out['errors'][0].get('message', 'error')))
+        me = out['data']['me']
+        return me[0] if isinstance(me, list) else me      # the API returns a list with one user
+
+    me = ask('query { me { user_books(where: {status_id: {_eq: 2}}, order_by: {updated_at: desc}, limit: %d) '
+             '{ book { title slug contributions { author { name } } } } } }' % limit)
     items = []
     for ub in me['user_books']:
         b = ub['book']
         authors = [c['author']['name'] for c in (b.get('contributions') or []) if c.get('author') and c['author'].get('name')]
-        items.append(("%s's %s" % (authors[0], b['title'])) if authors else b['title'])
-    return items
+        item = {'title': b['title']}
+        if authors:
+            item['by'] = authors[0]
+        if b.get('slug'):
+            item['url'] = 'https://hardcover.app/books/' + urllib.parse.quote(b['slug'])
+        items.append(item)
+
+    profile = (cfg.get('profile_url') or '').strip()
+    if not profile:                                       # separate query so a hiccup here never loses the book list
+        try:
+            name = (cfg.get('username') or '').strip() or ask('query { me { username } }').get('username')
+            if name:
+                profile = 'https://hardcover.app/@' + urllib.parse.quote(name)
+        except Exception:
+            pass
+    return items, profile
 
 
 def mal(cfg, client_id):
@@ -61,7 +82,9 @@ def mal(cfg, client_id):
     out = http(url, {'X-MAL-CLIENT-ID': client_id})
     rows = out.get('data', [])
     rows.sort(key=lambda r: (-(r.get('list_status', {}).get('score') or 0), _neg(r.get('list_status', {}).get('updated_at'))))
-    return [r['node']['title'] for r in rows[:int(cfg.get('limit', 4))]]
+    items = [{'title': r['node']['title'], 'url': 'https://myanimelist.net/anime/%s' % r['node']['id']}
+             for r in rows[:int(cfg.get('limit', 4))]]
+    return items, 'https://myanimelist.net/profile/' + urllib.parse.quote(user)
 
 
 def _neg(iso):                                           # newest first as the tie-break
@@ -78,7 +101,13 @@ def lastfm(cfg, key):
     out = http(url)
     if 'error' in out:
         raise RuntimeError('Last.fm: ' + str(out.get('message', out['error'])))
-    return [a['name'] for a in out['topartists']['artist']]
+    items = []
+    for a in out['topartists']['artist']:
+        item = {'title': a['name']}
+        if a.get('url'):
+            item['url'] = a['url']
+        items.append(item)
+    return items, 'https://www.last.fm/user/' + urllib.parse.quote(user)
 
 
 SOURCES = [('reading', 'hardcover', 'HARDCOVER_TOKEN', hardcover),
@@ -102,6 +131,7 @@ def main():
         old = {}
 
     new = {k: old[k] for k in ('reading', 'watching', 'listening') if k in old}
+    links = dict(old.get('links') or {})
     errors = {}
     for field, section, env, fn in SOURCES:
         secret = os.environ.get(env, '').strip()
@@ -109,7 +139,10 @@ def main():
             errors[field] = '%s is not set; skipped' % env
             continue
         try:
-            items = [str(x).strip() for x in fn(config.get(section, {}), secret) if str(x).strip()]
+            raw, profile = fn(config.get(section, {}), secret)
+            items = [x for x in raw if x.get('title', '').strip()]
+            if profile:
+                links[field] = profile
             if items:
                 new[field] = items
             else:
@@ -118,6 +151,8 @@ def main():
             errors[field] = str(e)
 
     result = dict(new)
+    if links:
+        result['links'] = links
     if errors:
         result['errors'] = errors
     unchanged = {k: v for k, v in old.items() if k != 'updated'} == result
