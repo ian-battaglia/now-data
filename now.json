@@ -41,20 +41,20 @@
   ],
   "listening": [
     {
-      "title": "Dominic Fike",
-      "url": "https://www.last.fm/music/Dominic+Fike"
-    },
-    {
-      "title": "Show Me the Body",
-      "url": "https://www.last.fm/music/Show+Me+the+Body"
-    },
-    {
       "title": "Deftones",
       "url": "https://www.last.fm/music/Deftones"
     },
     {
       "title": "Flamingosis",
       "url": "https://www.last.fm/music/Flamingosis"
+    },
+    {
+      "title": "Nitsua",
+      "url": "https://www.last.fm/music/Nitsua"
+    },
+    {
+      "title": "ScHoolboy Q",
+      "url": "https://www.last.fm/music/ScHoolboy+Q"
     }
   ],
   "links": {
@@ -62,5 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-10-15T04:30:58Z"
+  "updated": "2026-10-17T04:23:14Z"
 }
