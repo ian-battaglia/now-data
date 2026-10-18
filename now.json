@@ -27,26 +27,26 @@
       "url": "https://myanimelist.net/anime/61323"
     },
     {
+      "title": "Kusuriya no Hitorigoto 3rd Season",
+      "url": "https://myanimelist.net/anime/61987"
+    },
+    {
       "title": "Toaru Anbu no Item",
       "url": "https://myanimelist.net/anime/61014"
     },
     {
       "title": "Romelia Senki",
       "url": "https://myanimelist.net/anime/59787"
-    },
-    {
-      "title": "Tensai Ouji no Akaji Kokka Saisei Jutsu",
-      "url": "https://myanimelist.net/anime/47159"
     }
   ],
   "listening": [
     {
-      "title": "Deftones",
-      "url": "https://www.last.fm/music/Deftones"
-    },
-    {
       "title": "Nitsua",
       "url": "https://www.last.fm/music/Nitsua"
+    },
+    {
+      "title": "Deftones",
+      "url": "https://www.last.fm/music/Deftones"
     },
     {
       "title": "Dominic Fike",
@@ -62,5 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-10-18T11:01:37Z"
+  "updated": "2026-10-18T15:50:48Z"
 }
