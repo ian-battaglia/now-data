@@ -41,20 +41,20 @@
   ],
   "listening": [
     {
-      "title": "Deftones",
-      "url": "https://www.last.fm/music/Deftones"
-    },
-    {
       "title": "Nitsua",
       "url": "https://www.last.fm/music/Nitsua"
     },
     {
-      "title": "Elate X Contour",
-      "url": "https://www.last.fm/music/Elate+X+Contour"
+      "title": "Uyama Hiroto",
+      "url": "https://www.last.fm/music/Uyama+Hiroto"
     },
     {
       "title": "Jinsang",
       "url": "https://www.last.fm/music/Jinsang"
+    },
+    {
+      "title": "Elate X Contour",
+      "url": "https://www.last.fm/music/Elate+X+Contour"
     }
   ],
   "links": {
@@ -62,5 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-10-19T04:38:12Z"
+  "updated": "2026-10-19T13:10:28Z"
 }
