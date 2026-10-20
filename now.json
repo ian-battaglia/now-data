@@ -41,6 +41,10 @@
   ],
   "listening": [
     {
+      "title": "Witness",
+      "url": "https://www.last.fm/music/Witness"
+    },
+    {
       "title": "Nitsua",
       "url": "https://www.last.fm/music/Nitsua"
     },
@@ -51,10 +55,6 @@
     {
       "title": "Jinsang",
       "url": "https://www.last.fm/music/Jinsang"
-    },
-    {
-      "title": "Elate X Contour",
-      "url": "https://www.last.fm/music/Elate+X+Contour"
     }
   ],
   "links": {
@@ -62,5 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-10-19T13:10:28Z"
+  "updated": "2026-10-20T04:47:53Z"
 }
