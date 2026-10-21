@@ -62,5 +62,8 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-10-21T04:43:38Z"
+  "errors": {
+    "watching": "HTTP 503 from api.myanimelist.net"
+  },
+  "updated": "2026-10-21T17:10:07Z"
 }
