@@ -45,16 +45,16 @@
       "url": "https://www.last.fm/music/%E5%9D%82%E6%9C%AC%E9%BE%8D%E4%B8%80"
     },
     {
-      "title": "Kvelertak",
-      "url": "https://www.last.fm/music/Kvelertak"
-    },
-    {
       "title": "Bonobo",
       "url": "https://www.last.fm/music/Bonobo"
     },
     {
       "title": "Sun Kil Moon",
       "url": "https://www.last.fm/music/Sun+Kil+Moon"
+    },
+    {
+      "title": "jev.",
+      "url": "https://www.last.fm/music/jev."
     }
   ],
   "links": {
@@ -62,5 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-10-27T12:08:32Z"
+  "updated": "2026-10-27T22:12:18Z"
 }
