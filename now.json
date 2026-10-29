@@ -41,20 +41,20 @@
   ],
   "listening": [
     {
-      "title": "坂本龍一",
-      "url": "https://www.last.fm/music/%E5%9D%82%E6%9C%AC%E9%BE%8D%E4%B8%80"
-    },
-    {
       "title": "Bonobo",
       "url": "https://www.last.fm/music/Bonobo"
     },
     {
-      "title": "Sun Kil Moon",
-      "url": "https://www.last.fm/music/Sun+Kil+Moon"
+      "title": "坂本龍一",
+      "url": "https://www.last.fm/music/%E5%9D%82%E6%9C%AC%E9%BE%8D%E4%B8%80"
     },
     {
       "title": "Earl Sweatshirt",
       "url": "https://www.last.fm/music/Earl+Sweatshirt"
+    },
+    {
+      "title": "Sun Kil Moon",
+      "url": "https://www.last.fm/music/Sun+Kil+Moon"
     }
   ],
   "links": {
@@ -62,5 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-10-28T12:51:47Z"
+  "updated": "2026-10-29T05:45:11Z"
 }
