@@ -41,16 +41,16 @@
   ],
   "listening": [
     {
+      "title": "Black Country, New Road",
+      "url": "https://www.last.fm/music/Black+Country,+New+Road"
+    },
+    {
       "title": "Bonobo",
       "url": "https://www.last.fm/music/Bonobo"
     },
     {
       "title": "坂本龍一",
       "url": "https://www.last.fm/music/%E5%9D%82%E6%9C%AC%E9%BE%8D%E4%B8%80"
-    },
-    {
-      "title": "Black Country, New Road",
-      "url": "https://www.last.fm/music/Black+Country,+New+Road"
     },
     {
       "title": "Earl Sweatshirt",
@@ -62,5 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-10-29T22:43:39Z"
+  "updated": "2026-10-30T05:44:47Z"
 }
