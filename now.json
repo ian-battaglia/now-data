@@ -41,12 +41,12 @@
   ],
   "listening": [
     {
-      "title": "Black Country, New Road",
-      "url": "https://www.last.fm/music/Black+Country,+New+Road"
-    },
-    {
       "title": "Bonobo",
       "url": "https://www.last.fm/music/Bonobo"
+    },
+    {
+      "title": "Black Country, New Road",
+      "url": "https://www.last.fm/music/Black+Country,+New+Road"
     },
     {
       "title": "Denzel Curry",
@@ -62,5 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-11-03T23:20:56Z"
+  "updated": "2026-11-04T14:39:30Z"
 }
