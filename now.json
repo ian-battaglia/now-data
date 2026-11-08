@@ -27,12 +27,12 @@
       "url": "https://myanimelist.net/anime/61323"
     },
     {
-      "title": "Tensei Kizoku, Kantei Skill de Nariagaru 3rd Season",
-      "url": "https://myanimelist.net/anime/60601"
-    },
-    {
       "title": "Romelia Senki",
       "url": "https://myanimelist.net/anime/59787"
+    },
+    {
+      "title": "Tensei Kizoku, Kantei Skill de Nariagaru 3rd Season",
+      "url": "https://myanimelist.net/anime/60601"
     },
     {
       "title": "Toaru Anbu no Item",
@@ -45,16 +45,16 @@
       "url": "https://www.last.fm/music/Bonobo"
     },
     {
+      "title": "Gorillaz",
+      "url": "https://www.last.fm/music/Gorillaz"
+    },
+    {
       "title": "Shamana",
       "url": "https://www.last.fm/music/Shamana"
     },
     {
       "title": "Denzel Curry",
       "url": "https://www.last.fm/music/Denzel+Curry"
-    },
-    {
-      "title": "Raul Apxpei",
-      "url": "https://www.last.fm/music/Raul+Apxpei"
     }
   ],
   "links": {
@@ -62,5 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-11-07T05:55:38Z"
+  "updated": "2026-11-08T05:57:49Z"
 }
