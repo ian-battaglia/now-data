@@ -45,12 +45,12 @@
       "url": "https://www.last.fm/music/Gorillaz"
     },
     {
-      "title": "Bonobo",
-      "url": "https://www.last.fm/music/Bonobo"
-    },
-    {
       "title": "Curren$y",
       "url": "https://www.last.fm/music/Curren$y"
+    },
+    {
+      "title": "Bonobo",
+      "url": "https://www.last.fm/music/Bonobo"
     },
     {
       "title": "SamuraiHacks",
@@ -62,5 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-11-12T23:36:50Z"
+  "updated": "2026-11-14T06:18:16Z"
 }
