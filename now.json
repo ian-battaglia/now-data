@@ -45,16 +45,16 @@
       "url": "https://www.last.fm/music/Curren$y"
     },
     {
-      "title": "Bonobo",
-      "url": "https://www.last.fm/music/Bonobo"
-    },
-    {
       "title": "Pink Siifu",
       "url": "https://www.last.fm/music/Pink+Siifu"
     },
     {
       "title": "Day 56 Reckless",
       "url": "https://www.last.fm/music/Day+56+Reckless"
+    },
+    {
+      "title": "Denzel Curry",
+      "url": "https://www.last.fm/music/Denzel+Curry"
     }
   ],
   "links": {
@@ -62,5 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "updated": "2026-11-17T20:52:47Z"
+  "updated": "2026-11-18T07:24:26Z"
 }
