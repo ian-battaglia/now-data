@@ -41,12 +41,12 @@
   ],
   "listening": [
     {
-      "title": "Anderson .Paak",
-      "url": "https://www.last.fm/music/Anderson+.Paak"
-    },
-    {
       "title": "Queens of the Stone Age",
       "url": "https://www.last.fm/music/Queens+of+the+Stone+Age"
+    },
+    {
+      "title": "Anderson .Paak",
+      "url": "https://www.last.fm/music/Anderson+.Paak"
     },
     {
       "title": "Thou",
@@ -62,8 +62,5 @@
     "watching": "https://myanimelist.net/profile/aelius_desu",
     "listening": "https://www.last.fm/user/IanBattaglia"
   },
-  "errors": {
-    "listening": "HTTP 500 from ws.audioscrobbler.com"
-  },
-  "updated": "2026-11-26T08:12:51Z"
+  "updated": "2026-11-26T21:28:43Z"
 }
